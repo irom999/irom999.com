@@ -4,14 +4,30 @@
 	import * as DarkMode from 'svelte-fancy-darkmode';
 	import MoonToSunny from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
 	import SunnyToMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-transition';
+
+	const LINKS = [
+		{ name: 'blog', href: resolve('/blog') },
+	] as const;
 </script>
+
+{#snippet underline(isPath: boolean, transparentDefault = false)}
+	<span
+		class={{
+			'bg-accent-100': isPath,
+			'bg-transparent': !isPath || transparentDefault,
+		}}
+		absolute
+		h-0.5
+		w-full
+	></span>
+{/snippet}
 
 <header
 	fcol
 	fyc
 	gap-y-lg
 	grid
-	grid-cols="1 md:2"
+	grid-cols="1 md:3"
 	mxa
 	op="card hover:100"
 	py-6
@@ -33,17 +49,36 @@
 			>
 				@irom999
 			</div>
+			<div>{@render underline(page.url.pathname === '/', true)}</div>
 		</a>
 	</div>
 	<nav
+		col-span-2
 		flex="wrap"
 		font-bold
-		fxc
+		fyc
 		gap-4
 		m="xa md:r0"
 		md-fxe
 		text-lg
 	>
+		<div flex gap-4>
+			{#each LINKS as { href, name } (href)}
+				{@const isPath = page.url.pathname.startsWith(href)}
+				<a
+					style:view-transition-name="-nav-link-{name}"
+					block
+					{href}
+					px-0
+					relative
+				>
+					<div fyc>
+						{name}
+					</div>
+					{@render underline(isPath, false)}
+				</a>
+			{/each}
+		</div>
 		<div flex gap="4 md:2" view-transition--nav-icons>
 			<DarkMode.ToggleButton>
 				{#snippet dark()}

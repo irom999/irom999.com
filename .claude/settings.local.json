@@ -28,7 +28,13 @@
       "Bash(git init:*)",
       "Bash(pnpm dev)",
       "WebFetch(domain:localhost)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebSearch",
+      "Bash(pnpm build:*)",
+      "Bash(tasklist:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(gh search:*)"
     ]
   }
 }
