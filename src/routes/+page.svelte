@@ -1,29 +1,37 @@
 <script>
 	import Profile from '$components/Profile.svelte';
 	import Social from '$components/Social.svelte';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
+
+	let hasVisited = browser && sessionStorage.getItem('hasVisitedHome') === 'true';
+
+	if (browser && !hasVisited) {
+		sessionStorage.setItem('hasVisitedHome', 'true');
+	}
 </script>
 
 <article container gcc mt8 mxa>
-	<div animate="duration-1000 keyframes-flip-in-x">
+	<div animate={hasVisited ? '' : 'duration-1000 keyframes-flip-in-x'}>
 		<Profile />
 	</div>
 	<div mt8 max-w-2xl mxa px-4>
-		<p font="mono bold" text="2xl center gray-600" leading-tight class="word-animation">
-			<span class="word">Hi!</span>
-			<span class="word">I'm</span>
-			<span class="word" style:view-transition-name="title-irom999">irom999.</span>
+		<p font="mono bold" text="2xl center gray-600" leading-tight class={hasVisited ? '' : 'word-animation'}>
+			<span class={hasVisited ? '' : 'word'}>Hi!</span>
+			<span class={hasVisited ? '' : 'word'}>I'm</span>
+			<span class={hasVisited ? '' : 'word'} style:view-transition-name="title-irom999">irom999.</span>
 			<br />
-			<span class="word">Click</span>
-			<a href="/blog" class="word">here</a>
-			<span class="word">to</span>
-			<span class="word">check</span>
-			<span class="word">my</span>
-			<span class="word">blogs.</span>
+			<span class={hasVisited ? '' : 'word'}>Click</span>
+			<a href="/blog" class={hasVisited ? '' : 'word'} style={hasVisited ? 'color: #fb923c; text-decoration: underline;' : ''}>here</a>
+			<span class={hasVisited ? '' : 'word'}>to</span>
+			<span class={hasVisited ? '' : 'word'}>check</span>
+			<span class={hasVisited ? '' : 'word'}>my</span>
+			<span class={hasVisited ? '' : 'word'}>blogs.</span>
 		</p>
 	</div>
 
 	<!-- GitHub Link -->
-	<div mt-6 fxc gap-2 px-4 class="github-link">
+	<div mt-6 fxc gap-2 px-4 class={hasVisited ? '' : 'github-link'}>
 		<a
 			class="btn-blue"
 			fyc
