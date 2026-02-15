@@ -16,13 +16,24 @@
 		<Profile />
 	</div>
 	<div mt8 max-w-2xl mxa px-4>
-		<p font="mono bold" text="2xl center gray-600" leading-tight class={hasVisited ? '' : 'word-animation'}>
+		<p
+			font="mono bold"
+			text="2xl center gray-600 dark:gray-300"
+			leading-tight
+			class={hasVisited ? '' : 'word-animation'}
+		>
 			<span class={hasVisited ? '' : 'word'}>Hi!</span>
 			<span class={hasVisited ? '' : 'word'}>I'm</span>
-			<span class={hasVisited ? '' : 'word'} style:view-transition-name="title-irom999">irom999.</span>
+			<span class={hasVisited ? '' : 'word'} style:view-transition-name="title-irom999"
+				>irom999.</span
+			>
 			<br />
 			<span class={hasVisited ? '' : 'word'}>Click</span>
-			<a href="/blog" class={hasVisited ? '' : 'word'} style={hasVisited ? 'color: #fb923c; text-decoration: underline;' : ''}>here</a>
+			<a
+				href="/blog"
+				class={hasVisited ? '' : 'word'}
+				style={hasVisited ? 'color: #fb923c; text-decoration: underline;' : ''}>here</a
+			>
 			<span class={hasVisited ? '' : 'word'}>to</span>
 			<span class={hasVisited ? '' : 'word'}>check</span>
 			<span class={hasVisited ? '' : 'word'}>my</span>
