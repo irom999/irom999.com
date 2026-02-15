@@ -1,10 +1,11 @@
 <div>
 	<img
-		class="mx-auto aspect-square w-1/2 rounded-full object-contain md:size-64"
+		class="mx-auto aspect-square w-1/2 rounded-full object-cover md:size-64"
 		style:view-transition-name="profile"
 		alt="profile"
 		fetchpriority="high"
 		loading="eager"
-		src="/placeholder.svg"
+		src="/my_pic.JPG"
+		grayscale
 	/>
 </div>
