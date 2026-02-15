@@ -1,3 +1,7 @@
+<script>
+	import Button from '$components/Button.svelte';
+</script>
+
 <div mxa px-10 pt-10 max-w-3xl>
 	<h1 text-4xl font-bold mb-8>About Me</h1>
 
@@ -31,7 +35,7 @@
 
 	<section mb-8>
 		<h2 text-2xl font-bold mb-4>📫 連絡先</h2>
-		<p text-lg>
+		<p text-lg mb-6>
 			GitHub:
 			<a
 				href="https://github.com/irom999"
@@ -43,5 +47,12 @@
 				@irom999
 			</a>
 		</p>
+
+		<!-- ボタンコンポーネントの使用例 -->
+		<div flex gap-4 flex-wrap>
+			<Button href="https://github.com/irom999" target="_blank">GitHubを見る</Button>
+			<Button variant="secondary" href="/blog">ブログを読む</Button>
+			<Button variant="outline" href="/">ホームへ戻る</Button>
+		</div>
 	</section>
 </div>
