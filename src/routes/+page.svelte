@@ -11,7 +11,7 @@
 		<p font="mono bold" text="2xl center gray-600" leading-tight class="word-animation">
 			<span class="word">Hi!</span>
 			<span class="word">I'm</span>
-			<span class="word">irom999.</span>
+			<span class="word" style:view-transition-name="title-irom999">irom999.</span>
 			<br />
 			<span class="word">Click</span>
 			<a href="/blog" class="word">here</a>

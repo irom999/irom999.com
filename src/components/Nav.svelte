@@ -45,17 +45,6 @@
 		</a>
 	</div>
 	<nav col-span-2 flex="wrap" font-bold fyc gap-4 m="xa md:r0" md-fxe text-lg>
-		<div flex gap-4>
-			{#each LINKS as { href, name } (href)}
-				{@const isPath = page.url.pathname.startsWith(href)}
-				<a style:view-transition-name="-nav-link-{name}" block {href} px-0 relative>
-					<div fyc>
-						{name}
-					</div>
-					{@render underline(isPath, false)}
-				</a>
-			{/each}
-		</div>
 		<div flex gap="4 md:2" view-transition--nav-icons>
 			<DarkMode.ToggleButton>
 				{#snippet dark()}
