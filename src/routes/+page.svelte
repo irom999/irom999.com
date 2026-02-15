@@ -21,6 +21,21 @@
 			<span class="word">blogs.</span>
 		</p>
 	</div>
+
+	<!-- GitHub Link -->
+	<div mt-6 fxc gap-2 px-4 class="github-link">
+		<a
+			class="btn-blue"
+			fyc
+			gap-1
+			href="https://github.com/irom999"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<span class="i-ph-github-logo-duotone"></span>
+			GitHub
+		</a>
+	</div>
 </article>
 
 <style>
@@ -126,6 +141,21 @@
 		}
 		66% {
 			color: #c2410c;
+		}
+	}
+
+	.github-link {
+		opacity: 0;
+		animation: fade-in-github 0.5s ease-in-out forwards;
+		animation-delay: 4s;
+	}
+
+	@keyframes fade-in-github {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 </style>

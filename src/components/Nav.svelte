@@ -55,15 +55,6 @@
 					<MoonToSunny />
 				{/snippet}
 			</DarkMode.ToggleButton>
-			<a
-				class="i-teenyicons:github-solid"
-				fyc
-				href="https://github.com/irom999"
-				mya
-				target="_blank"
-			>
-				source code
-			</a>
 		</div>
 	</nav>
 </header>
