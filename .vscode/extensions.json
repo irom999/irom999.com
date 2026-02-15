@@ -1,0 +1,19 @@
+{
+	"recommendations": [
+		// 必須
+		"svelte.svelte-vscode",
+		"antfu.unocss",
+
+		// 強く推奨
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"usernamehw.errorlens",
+
+		// 便利
+		"yzhang.markdown-all-in-one",
+		"christian-kohler.path-intellisense",
+		"formulahendry.auto-rename-tag",
+		"eamodio.gitlens",
+		"naumovs.color-highlight"
+	]
+}

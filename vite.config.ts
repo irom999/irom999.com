@@ -8,9 +8,7 @@ export default defineConfig({
 	plugins: [
 		Icons({ compiler: 'svelte' }),
 		UnoCSS({
-			extractors: [
-				extractorSvelte(),
-			],
+			extractors: [extractorSvelte()],
 		}),
 		sveltekit(),
 	],

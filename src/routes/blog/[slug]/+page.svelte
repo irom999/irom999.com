@@ -21,13 +21,18 @@
 		<hr ma max-w-100 op25 w-full />
 	</div>
 
-	<article class={['prose dark:prose-invert', !dev && 'slide-enter-content']} mxa pb-8 text-text="700 dark:200">
+	<article
+		class={['prose dark:prose-invert', !dev && 'slide-enter-content']}
+		mxa
+		pb-8
+		text-text="700 dark:200"
+	>
 		{@html data.post.html}
 	</article>
 </div>
 
 <style>
-:global(article a) {
-	--uno: no-underline hover:underline;
-}
+	:global(article a) {
+		--uno: no-underline hover: underline;
+	}
 </style>

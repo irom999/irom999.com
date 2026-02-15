@@ -5,12 +5,7 @@
 		selectDisabled?: boolean;
 		opacity?: boolean;
 	};
-	const {
-		title,
-		viewTransitionName,
-		selectDisabled = false,
-		opacity = true,
-	}: Props = $props();
+	const { title, viewTransitionName, selectDisabled = false, opacity = true }: Props = $props();
 </script>
 
 <h1

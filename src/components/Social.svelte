@@ -21,12 +21,13 @@
 			op-card
 			transition-base
 		>
-			<a aria-label="link to irom999's {label}" href={url} rel="noopener noreferrer" target="_blank">
-				<div
-					style:--size="{size}vh"
-					class={_class}
-					text-size="[--size]"
-				></div>
+			<a
+				aria-label="link to irom999's {label}"
+				href={url}
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<div style:--size="{size}vh" class={_class} text-size="[--size]"></div>
 			</a>
 		</div>
 	{/each}

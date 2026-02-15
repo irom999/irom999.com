@@ -57,7 +57,7 @@ export default defineConfig({
 		}),
 		presetTypography({
 			cssExtend: {
-				'code': {
+				code: {
 					color: theme.colors.text[800],
 				},
 				'html.dark code': {
@@ -67,16 +67,10 @@ export default defineConfig({
 		}),
 		presetFluid(),
 	],
-	transformers: [
-		transformerDirectives(),
-		transformerVariantGroup(),
-	],
+	transformers: [transformerDirectives(), transformerVariantGroup()],
 	content: {
 		pipeline: {
-			exclude: [
-				/~icons/,
-				/svelte-meta-tags/,
-			],
+			exclude: [/~icons/, /svelte-meta-tags/],
 		},
 	},
 	extendTheme: (_theme) => {
@@ -92,14 +86,18 @@ export default defineConfig({
 			'border-base': 'border-[#8884]',
 			'op-card': 'op70 dark:op50 hover:op80 group-hover:op80',
 			'transition-base': 'transition-all transition-duration-500',
-			'fcc': 'flex justify-center items-center',
-			'fcol': 'flex flex-col',
-			'fxc': 'flex justify-center',
-			'fxe': 'flex justify-end',
-			'fyc': 'flex items-center',
-			'fys': 'flex items-start',
-			'gcc': 'grid place-content-center place-items-center',
+			fcc: 'flex justify-center items-center',
+			fcol: 'flex flex-col',
+			fxc: 'flex justify-center',
+			fxe: 'flex justify-end',
+			fyc: 'flex items-center',
+			fys: 'flex items-start',
+			gcc: 'grid place-content-center place-items-center',
 		},
-		[/^btn-(\w+)$/, ([_, color]: string[]) => `op50 px2.5 py1 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color} bg-${color}/10) border border-base! rounded`],
+		[
+			/^btn-(\w+)$/,
+			([_, color]: string[]) =>
+				`op50 px2.5 py1 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color} bg-${color}/10) border border-base! rounded`,
+		],
 	],
 });

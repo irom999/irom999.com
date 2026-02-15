@@ -5,9 +5,7 @@
 	import MoonToSunny from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
 	import SunnyToMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-transition';
 
-	const LINKS = [
-		{ name: 'blog', href: resolve('/blog') },
-	] as const;
+	const LINKS = [{ name: 'blog', href: resolve('/blog') }] as const;
 </script>
 
 {#snippet underline(isPath: boolean, transparentDefault = false)}
@@ -36,42 +34,18 @@
 	view-transition--nav
 >
 	<div flex>
-		<a
-			aria-label="Home"
-			font-bold
-			href={resolve('/')}
-			m="xa md:(b0 x0)"
-			relative
-		>
-			<div
-				style:view-transition-name="title-irom999"
-				class={{ hidden: page.url.pathname === '/' }}
-			>
+		<a aria-label="Home" font-bold href={resolve('/')} m="xa md:(b0 x0)" relative>
+			<div style:view-transition-name="title-irom999" class={{ hidden: page.url.pathname === '/' }}>
 				@irom999
 			</div>
 			<div>{@render underline(page.url.pathname === '/', true)}</div>
 		</a>
 	</div>
-	<nav
-		col-span-2
-		flex="wrap"
-		font-bold
-		fyc
-		gap-4
-		m="xa md:r0"
-		md-fxe
-		text-lg
-	>
+	<nav col-span-2 flex="wrap" font-bold fyc gap-4 m="xa md:r0" md-fxe text-lg>
 		<div flex gap-4>
 			{#each LINKS as { href, name } (href)}
 				{@const isPath = page.url.pathname.startsWith(href)}
-				<a
-					style:view-transition-name="-nav-link-{name}"
-					block
-					{href}
-					px-0
-					relative
-				>
+				<a style:view-transition-name="-nav-link-{name}" block {href} px-0 relative>
 					<div fyc>
 						{name}
 					</div>
@@ -103,7 +77,7 @@
 </header>
 
 <style>
-a {
-	--uno: no-underline;
-}
+	a {
+		--uno: no-underline;
+	}
 </style>

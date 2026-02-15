@@ -23,7 +23,7 @@ irom999.com のブログを始めました。
 
 ```typescript
 function greet(name: string): string {
-  return `Hello, ${name}!`;
+	return `Hello, ${name}!`;
 }
 
 console.log(greet('world'));

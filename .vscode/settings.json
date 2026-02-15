@@ -1,0 +1,25 @@
+{
+	// Prettier設定
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+
+	// Svelte設定
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+
+	// UnoCSS設定
+	"unocss.root": ".",
+
+	// Error Lens設定
+	"errorLens.enabledDiagnosticLevels": ["error", "warning"],
+
+	// ファイル関連
+	"files.associations": {
+		"*.css": "css"
+	},
+
+	// TypeScript設定
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true
+}
