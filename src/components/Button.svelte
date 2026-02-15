@@ -19,7 +19,7 @@
 	<!-- リンクの場合 -->
 	<a
 		{href}
-		class={variantStyles[variant]}
+		class={[variantStyles[variant], 'hover:scale-105 active:scale-95']}
 		px-6
 		py-3
 		rounded-lg
@@ -34,7 +34,7 @@
 	<!-- ボタンの場合 -->
 	<button
 		{type}
-		class={variantStyles[variant]}
+		class={[variantStyles[variant], 'hover:scale-105 active:scale-95']}
 		px-6
 		py-3
 		rounded-lg

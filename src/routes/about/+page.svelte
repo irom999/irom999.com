@@ -2,16 +2,20 @@
 	import Button from '$components/Button.svelte';
 </script>
 
-<div mxa px-10 pt-10 max-w-3xl>
-	<h1 text-4xl font-bold mb-8>About Me</h1>
+<!-- ページ全体にフェードインアニメーション -->
+<div mxa px-10 pt-10 max-w-3xl animate="duration-500 keyframes-fade-in">
+	<!-- タイトルにスライドインアニメーション -->
+	<h1 text-4xl font-bold mb-8 animate="duration-800 keyframes-slide-in-top">About Me</h1>
 
-	<section mb-8>
+	<!-- セクション1: フェードイン（遅延200ms） -->
+	<section mb-8 animate="duration-1000 keyframes-fade-in" style="animation-delay: 200ms">
 		<h2 text-2xl font-bold mb-4>👋 はじめまして</h2>
 		<p text-lg leading-relaxed mb-4>irom999です。ソフトウェアエンジニアとして活動しています。</p>
 		<p text-lg leading-relaxed>このサイトは、SvelteKitとUnoCSSを学びながら構築しています。</p>
 	</section>
 
-	<section mb-8>
+	<!-- セクション2: フェードイン（遅延400ms） -->
+	<section mb-8 animate="duration-1000 keyframes-fade-in" style="animation-delay: 400ms">
 		<h2 text-2xl font-bold mb-4>🛠️ スキル</h2>
 		<div grid grid-cols="1 sm:2" gap-4>
 			<div p-4 bg-accent-100 rounded class="light:bg-bg-200">
@@ -33,7 +37,8 @@
 		</div>
 	</section>
 
-	<section mb-8>
+	<!-- セクション3: フェードイン（遅延600ms） -->
+	<section mb-8 animate="duration-1000 keyframes-fade-in" style="animation-delay: 600ms">
 		<h2 text-2xl font-bold mb-4>📫 連絡先</h2>
 		<p text-lg mb-6>
 			GitHub:
