@@ -14,9 +14,9 @@ import { presetFluid } from 'unocss-preset-fluid';
 const theme = {
 	colors: {
 		accent: {
-			100: '#6B8AFF',
-			200: '#4D6BDD',
-			300: '#1A3A8F',
+			100: '#FB923C',
+			200: '#F97316',
+			300: '#C2410C',
 		},
 		text: {
 			100: '#FFFFFF',
