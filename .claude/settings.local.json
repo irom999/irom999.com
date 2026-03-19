@@ -38,7 +38,8 @@
       "Bash(pnpm format:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:www.npmjs.com)"
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(find 'C:/Users/Yusuke Mori/repos/irom999.com/.svelte-kit' -name *.css)"
     ]
   }
 }
