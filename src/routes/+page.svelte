@@ -11,16 +11,16 @@
 	}
 </script>
 
-<article container gcc mt8 mxa>
-	<div animate={hasVisited ? '' : 'duration-1000 keyframes-flip-in-x'}>
+<article class="container gcc mt8 mxa">
+	<div class={hasVisited ? '' : 'animate-duration-1000 animate-keyframes-flip-in-x'}>
 		<Profile />
 	</div>
-	<div mt8 max-w-2xl mxa px-4>
+	<div class="mt8 max-w-2xl mxa px-4">
 		<p
-			font="mono bold"
-			text="2xl center gray-600 dark:gray-300"
-			leading-tight
-			class={hasVisited ? '' : 'word-animation'}
+			class={[
+				'font-mono font-bold text-2xl text-center text-gray-600 dark:text-gray-300 leading-tight',
+				hasVisited ? '' : 'word-animation',
+			]}
 		>
 			<span class={hasVisited ? '' : 'word'}>Hi!</span>
 			<span class={hasVisited ? '' : 'word'}>I'm</span>
@@ -42,11 +42,9 @@
 	</div>
 
 	<!-- GitHub Link -->
-	<div mt-6 fxc gap-2 px-4 class={hasVisited ? '' : 'github-link'}>
+	<div class="mt-6 fxc gap-2 px-4 {hasVisited ? '' : 'github-link'}">
 		<a
-			class="btn-blue"
-			fyc
-			gap-1
+			class="btn-blue fyc gap-1"
 			href="https://github.com/irom999"
 			target="_blank"
 			rel="noopener noreferrer"

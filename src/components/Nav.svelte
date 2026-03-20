@@ -8,39 +8,26 @@
 
 {#snippet underline(isPath: boolean, transparentDefault = false)}
 	<span
-		class={{
-			'bg-accent-100': isPath,
-			'bg-transparent': !isPath || transparentDefault,
-		}}
-		absolute
-		h-0.5
-		w-full
+		class={[
+			{ 'bg-accent-100': isPath, 'bg-transparent': !isPath || transparentDefault },
+			'absolute h-0.5 w-full',
+		]}
 	></span>
 {/snippet}
 
 <header
-	fcol
-	fyc
-	gap-y-lg
-	grid
-	grid-cols="1 md:3"
-	mxa
-	op="card hover:100"
-	py-6
-	text-xl
-	transition-base
-	view-transition--nav
+	class="fcol fyc gap-y-lg grid grid-cols-1 md:grid-cols-3 mxa op-card hover:op-100 py-6 text-xl transition-base view-transition--nav"
 >
-	<div flex>
-		<a aria-label="Home" font-bold href={resolve('/')} m="xa md:(b0 x0)" relative>
+	<div class="flex">
+		<a aria-label="Home" class="font-bold m-xa md:(mb0 mx0) relative" href={resolve('/')}>
 			<div style:view-transition-name="title-irom999" class={{ hidden: page.url.pathname === '/' }}>
 				@irom999
 			</div>
 			<div>{@render underline(page.url.pathname === '/', true)}</div>
 		</a>
 	</div>
-	<nav col-span-2 flex="wrap" font-bold fyc gap-4 m="xa md:r0" md-fxe text-lg>
-		<div flex gap="4 md:2" view-transition--nav-icons>
+	<nav class="col-span-2 flex-wrap font-bold fyc gap-4 mxa md:mr0 md:fxe text-lg">
+		<div class="flex gap-4 md:gap-2 view-transition--nav-icons">
 			<DarkMode.ToggleButton>
 				{#snippet dark()}
 					<SunnyToMoon />

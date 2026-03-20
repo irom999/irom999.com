@@ -46,7 +46,7 @@
 	}}
 />
 
-<main max-w-4xl mxa my3 px-8 un-dark>
+<main class="max-w-4xl mxa my3 px-8 un-dark">
 	<Nav />
 	{#key page.url}
 		{@render children()}

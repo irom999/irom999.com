@@ -8,26 +8,17 @@
 
 <article
 	style:--cols={ICONS.length}
-	animate="duration-3000 keyframes-fade-in"
-	gap-3
-	gcc
-	grid-cols-3
-	class="sm:grid-cols-[repeat(var(--cols),minmax(0,1fr))]"
+	class={['animate-duration-3000 animate-keyframes-fade-in gap-3 gcc grid-cols-3', 'sm:grid-cols-[repeat(var(--cols),minmax(0,1fr))]']}
 >
 	{#each ICONS as { class: _class, url, label } (url)}
-		<div
-			cursor-pointer
-			hover="scale-110 shadow-xl z-10 bg-[#88888811] op100"
-			op-card
-			transition-base
-		>
+		<div class="cursor-pointer hover:scale-110 hover:shadow-xl hover:z-10 hover:bg-[#88888811] hover:op100 op-card transition-base">
 			<a
 				aria-label="link to irom999's {label}"
 				href={url}
 				rel="noopener noreferrer"
 				target="_blank"
 			>
-				<div style:--size="{size}vh" class={_class} text-size="[--size]"></div>
+				<div style:--size="{size}vh" class="{_class} text-size-[--size]"></div>
 			</a>
 		</div>
 	{/each}
