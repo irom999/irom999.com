@@ -1,8 +1,8 @@
-#import "alta-typst.typ": alta, term, styled-link
+#import "alta-typst.typ": alta, icon, term, tech, styled-link
 
 #alta(
   name: "森 裕介",
-  name-ruby: "もり ゆうすけ",
+  name-ruby: "Yusuke Mori",
   links: (
     (name: "email",   link: "mailto:morizei0719@gmail.com", display: "morizei0719@gmail.com"),
     (name: "website", link: "https://irom999.com/",         display: "irom999.com"),
@@ -10,79 +10,132 @@
   ),  [
     == 職務経歴
 
-    === エンジニア \
-    _株式会社NTTデータ_\
-    #term[2023年4月 ～ 現在（約3年）][東京]
+    === #icon("building")FASHIONSNAP
 
-    ==== バックエンド開発
-    #term[2023年5月 ～ 2023年8月]
+    ===== ▶ インターン
+
+    ==== ニュース記事 / 企画記事 執筆
+
+    ===== Webライター
+
+    #term[2020年7月 - 2023年3月]
+
+    - ファッション・トレンドに関するニュース記事の執筆・編集を担当
+    - 大学生100人にアンケートする企画記事を執筆
+
+      - #styled-link("https://www.fashionsnap.com/article/college100-waseda/")[早稲田生100人にアンケート調査、好きなファッションブランドは？]
+      - #styled-link("https://www.fashionsnap.com/article/college100-keio/")[慶應生100人にアンケート調査、好きなファッションブランドは？]
+    
+    === #icon("building")NTTデータ
+
+    ===== ▶ 正社員
+
+    ==== 通信事業大手 / モバイルアプリ開発プロジェクト
+
+    ===== バックエンド（プロダクトオーナーアシスタント）
+    
+    #term[2023年5月 - 2023年8月]
+    
+    #tech("REST API", "マイクロサービス", "Docker")
 
     - バックエンドチームの PO 補佐として、Node.js を用いた API 開発を主導
     - マイクロサービスアーキテクチャの設計に携わり、サービス分割と API インターフェース設計を担当
 
-    ==== モバイルアプリ要件定義
-    #term[2023年9月 ～ 2024年6月]
+    ===== フロントエンド（プロダクトオーナーアシスタント）
+    
+    #term[2023年9月 - 2024年6月]
+
+    #tech("Figma")
 
     - フロントエンドチームの PO 補佐として、モバイルアプリの要件定義を担当
     - Scale フレームワークベースのスクラム開発を経験、スプリント計画・レトロスペクティブを主導
 
-    ==== Flutter クロスプラットフォームアプリ開発
-    #term[2024年7月 ～ 2025年9月]
+    ===== フロントエンド（開発者）
+    
+    #term[2024年7月 - 2025年9月]
 
-    - フロントエンド Developer にロールチェンジし、Flutter を用いたクロスプラットフォームアプリ開発
-    - 状態管理ライブラリを Provider から Riverpod へ移行、可読性・テスタビリティを大幅に向上
+    #tech("Dart", "Flutter")
 
-    ==== データ分析基盤 リネージュアプリ開発
-    #term[2025年10月 ～ 2025年12月]
+    - フロントエンド開発者にロールチェンジし、Flutter を用いたクロスプラットフォームアプリ開発
+    - 状態管理ライブラリを Provider から Riverpod へ移行、可読性・テスタビリティを大幅に向上 ★ここはバージョンとかも訴求したい
+
+    ==== 通信事業大手 / データ分析基盤開発
+    
+    ===== リネージュアプリ（開発者）
+    
+    #term[2025年10月 - 2025年12月]
+
+    #tech("Python", "Streamlit", "Snowflake")
 
     - 大手通信会社の Snowflake 向けリネージュアプリケーションを Python / Streamlit で開発
     - データ依存関係の可視化と運用効率化を実現するツールを構築、運用コストの削減に貢献
 
-    ==== AI 駆動開発による開発自動化
+    ====== AI駆動による開発自動化の取り組み（開発者）
+    
     #term[2026年1月 ～ 現在]
+
+    #tech("Python", "Codex")
 
     - Codex を活用した AI 駆動開発で、データ分析基盤の開発プロセス自動化プロジェクトに参画中
 
-    #colbreak()
+    == スキルスタック
 
-    == スキル
-
-    *プログラミング言語（業務経験）*
+    *プログラミング言語（業務経験あり）*
+    
     - Dart
     - Python
 
-    *プログラミング言語（個人開発）*
-    - JavaScript / TypeScript
+    *プログラミング言語（業務外で使用）*
+    
+    - JavaScript
+    - TypeScript
 
-    *フレームワーク・ライブラリ（業務経験）*
-    - Flutter, Streamlit, FastAPI
+    *フレームワーク・ライブラリ（業務経験あり）*
+    
+    - Flutter
+    - RiverpodS
+    - Streamlit
+    - FastAPI
 
-    *フレームワーク・ライブラリ（個人開発）*
-    - Svelte / SvelteKit, React
+    *フレームワーク・ライブラリ（業務外で使用）*
 
-    *クラウド・インフラ*
-    - Snowflake, Docker
+    - Svelte
+    - SvelteKit
+    - React
+    - UnoCSS
+
+    *その他*
+    
+    - Snowflake
+    - Docker
 
     == 学歴
 
-    === 文化構想学部 卒業 \
-    _早稲田大学_\
-    #term[2018年3月 ～ 2022年9月][東京]
+    茨城県立土浦第一高等学校 卒業
+    
+    #term[2015年4月 - 2018年3月]
+   
+    早稲田大学 文化構想学部 卒業 
+    
+    #term[2018年4月 - 2022年9月]
 
     == 資格・認定
 
-    - 基本情報技術者（取得済み）
-    - 応用情報技術者（取得済み）
+    - 基本情報技術者
+    - 応用情報技術者
+    - TOEIC (830点)
 
     == 業務外活動
 
-    - *NTTデータ テックコンテスト 2025* 参加：React・Jenkins・Grafana を用いたモダン Web アプリを構築
-    - ポートフォリオサイト #styled-link("https://irom999.com/")[irom999.com] の開発・運用 — SvelteKit + UnoCSS を使用して設計から実装まで一人で担当
+    ===== NTTデータ Tech Contest 2025
+
+    #term[2025年5月]
+
+    - #styled-link("https://x.com/NTTDATA_PR/status/1942501408093118614")[NTTデータ主催のテックコンテスト] に参加
+    - React・Jenkins・Grafana を用いたモダン Web アプリケーションを構築
 
     == 自己 PR
 
-    PO補佐から Developer へのロールチェンジを経て、プロダクト全体を俯瞰した開発視点を身につけました。
-    バックエンド・モバイル・データ基盤と幅広い領域での開発経験を持ち、新しい技術領域への適応力を強みとしています。
-    チームでのコミュニケーションやスクラムプロセスの経験を活かし、技術面だけでなくプロジェクト推進においても貢献できるエンジニアを目指しています。
+    ここは自分の強み。ソフトスキルとハードスキル。
   ],
 )
