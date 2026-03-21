@@ -4,3 +4,5 @@ import type { RequestHandler } from './$types';
 export const GET: RequestHandler = () => {
 	redirect(301, '/yusuke_mori_cv.pdf');
 };
+
+export const prerender = true;
