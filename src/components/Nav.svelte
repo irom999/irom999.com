@@ -4,6 +4,7 @@
 	import * as DarkMode from 'svelte-fancy-darkmode';
 	import MoonToSunny from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
 	import SunnyToMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-transition';
+	import Download from '~icons/line-md/download-outline';
 </script>
 
 {#snippet underline(isPath: boolean, transparentDefault = false)}
@@ -27,6 +28,11 @@
 		</a>
 	</div>
 	<nav class="col-span-2 flex-wrap font-bold fyc gap-4 mxa md:mr0 md:fxe text-lg">
+		<a aria-label="Home" class="font-bold m-xa md:(mb0 mx0) relative fyc gap-1" href="/cv">
+			cv
+			<Download />
+			{@render underline(page.url.pathname === '/cv')}
+		</a>
 		<div class="flex gap-4 md:gap-2 view-transition--nav-icons">
 			<DarkMode.ToggleButton>
 				{#snippet dark()}

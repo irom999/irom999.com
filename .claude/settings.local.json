@@ -39,7 +39,12 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:www.npmjs.com)",
-      "Bash(find 'C:/Users/Yusuke Mori/repos/irom999.com/.svelte-kit' -name *.css)"
+      "Bash(find 'C:/Users/Yusuke Mori/repos/irom999.com/.svelte-kit' -name *.css)",
+      "Bash(typst --version)",
+      "WebFetch(domain:cv.ryoppippi.com)",
+      "Bash(pnpm build:cv)",
+      "Bash(typst fonts:*)",
+      "WebFetch(domain:ryoppippi.com)"
     ]
   }
 }
