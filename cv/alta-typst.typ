@@ -48,8 +48,8 @@
   tagline: [],
   content,
 ) = {
-  set document(title: name + "の職務経歴書", author: name)
-  set text(9.7pt, font: ("IBM Plex Sans JP", "BIZ UDGothic"))
+  set document(title: "CV - " + name, author: name)
+  set text(7.0pt, font: ("IBM Plex Sans JP", "BIZ UDGothic"))
   set page(margin: (x: 54pt, y: 52pt))
   set par(leading: 1.3em)
 

@@ -7,9 +7,7 @@
     (name: "email",   link: "mailto:morizei0719@gmail.com", display: "morizei0719@gmail.com"),
     (name: "website", link: "https://irom999.com/",         display: "irom999.com"),
     (name: "github",  link: "https://github.com/irom999",   display: "@irom999"),
-  ),
-  tagline: [NTTデータ所属エンジニア。バックエンド・モバイル・データ基盤と幅広い領域で開発経験を持つ。],
-  [
+  ),  [
     == 職務経歴
 
     === エンジニア \
