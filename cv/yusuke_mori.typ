@@ -78,18 +78,18 @@
     *フレームワーク・ライブラリ*
 
     - #skill("Flutter",        work: true,  level: 3)
-    - #skill("Riverpod",       work: true,  level: 2)
+    - #skill("Riverpod",       work: true,  level: 3)
     - #skill("Streamlit",      work: true,  level: 2)
     - #skill("FastAPI",        work: true,  level: 1)
-    - #skill("Svelte",                      level: 3)
-    - #skill("SvelteKit",                   level: 3)
+    - #skill("Svelte",                      level: 2)
+    - #skill("SvelteKit",                   level: 2)
     - #skill("React",                       level: 2)
     - #skill("UnoCSS",                      level: 2)
 
     *その他*
 
     - #skill("Snowflake",  work: true,  level: 2)
-    - #skill("Docker",     work: true,  level: 1)
+    - #skill("Docker",     work: true,  level: 2)
 
     == 学歴
 
