@@ -29,11 +29,13 @@
 	</div>
 	<nav class="col-span-2 flex-wrap font-bold fyc gap-4 mxa md:mr0 md:fxe text-lg">
 		<a aria-label="Home" class="font-bold m-xa md:(mb0 mx0) relative fyc gap-1" href="/cv" target="_blank" rel="noopener noreferrer">
-			cv
-			<Download />
+			<div style:view-transition-name="nav-cv" class="fyc gap-1">
+				cv
+				<Download />
+			</div>
 			{@render underline(page.url.pathname === '/cv')}
 		</a>
-		<div class="flex gap-4 md:gap-2 view-transition--nav-icons">
+		<div style:view-transition-name="nav-icons" class="flex gap-4 md:gap-2">
 			<DarkMode.ToggleButton>
 				{#snippet dark()}
 					<SunnyToMoon />
