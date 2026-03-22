@@ -40,10 +40,38 @@
   text(7.0pt, fill: muted_colour)[#icon("skill")#techs.pos().join(" · ")]
 }
 
+#let term_tech(period, ..techs) = {
+  grid(
+    columns: (1fr, auto),
+    align: (left, right),
+    text(7.0pt, fill: muted_colour)[#icon("calendar") #period],
+    text(7.0pt, fill: muted_colour)[#icon("skill")#techs.pos().join(" · ")],
+  )
+}
+
+#let skill_legend() = {
+  text(6pt, fill: muted_colour)[\* は、業務経験あり \ 習熟度は、「★☆☆：教わりながら開発できる, ★★☆：一人称で開発できる, ★★★：他者に教えられる」 で評価]
+}
+
+#let skill(name, work: false, level: 0) = {
+  grid(
+    columns: (1fr, auto),
+    align: (left + horizon, right + horizon),
+    text(7.0pt)[#name#if work { text(fill: primary_colour)[ \*] }],
+    text(7.0pt)[
+      #text(fill: muted_colour)[
+        #for i in range(3) { if i < level { "★" } else { "☆" } }
+      ]
+    ],
+  )
+}
+
 #let styled-link(dest, content) = emph(text(
   fill: link_colour,
   link(dest, content),
 ))
+
+#let plain_link(dest, content) = link(dest, content)
 
 #let alta(
   name: "",
@@ -102,9 +130,10 @@
   )
 
   findMe(links)
+  v(2pt)
 
   if tagline != [] {
-    text(9pt, fill: muted_colour)[#tagline]
+    text(7pt, fill: muted_colour)[#tagline]
     v(2pt)
   }
 
