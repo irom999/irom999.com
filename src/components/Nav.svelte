@@ -28,7 +28,7 @@
 		</a>
 	</div>
 	<nav class="col-span-2 flex-wrap font-bold fyc gap-4 mxa md:mr0 md:fxe text-lg">
-		<a aria-label="Home" class="font-bold m-xa md:(mb0 mx0) relative fyc gap-1" href="/cv">
+		<a aria-label="Home" class="font-bold m-xa md:(mb0 mx0) relative fyc gap-1" href="/cv" target="_blank" rel="noopener noreferrer">
 			cv
 			<Download />
 			{@render underline(page.url.pathname === '/cv')}
