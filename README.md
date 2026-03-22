@@ -1,42 +1,67 @@
-# sv
+# irom999.com
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+森 裕介のポートフォリオサイト。
 
-## Creating a project
+## 技術スタック
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **SvelteKit** (Svelte 5) — フレームワーク
+- **UnoCSS** — スタイリング
+- **TypeScript** — 全ファイルで使用
+- **unplugin-icons** — アイコン
+- **gray-matter + unified** — Markdown 処理
+- **Typst** — CV (PDF) 生成
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## 開発
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --no-install .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+依存パッケージをインストール：
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm install
 ```
 
-## Building
-
-To create a production version of your app:
+開発サーバーを起動：
 
 ```sh
-npm run build
+pnpm dev
 ```
 
-You can preview the production build with `npm run preview`.
+## コマンド
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+pnpm dev          # 開発サーバー起動
+pnpm build        # プロダクションビルド
+pnpm preview      # ビルド結果のプレビュー
+pnpm check        # 型チェック
+pnpm lint         # ESLint
+pnpm format       # Prettier フォーマット
+pnpm build:cv     # CV (PDF) をビルド → static/cv.pdf
+```
+
+## ブログ
+
+`src/content/blog/*.md` に Markdown ファイルを追加すると自動的にブログ記事として公開される。
+
+フロントマター形式：
+
+```yaml
+---
+title: タイトル
+description: 説明
+date: '2025-01-01'
+published: true
+tags:
+  - tag1
+---
+```
+
+`published: false` にすると非公開。
+
+## CV
+
+`cv/yusuke_mori.typ` を編集後、以下でビルド：
+
+```sh
+pnpm build:cv
+```
+
+`static/cv.pdf` に出力され、`/cv` からアクセスできる。
