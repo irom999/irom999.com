@@ -44,7 +44,8 @@
       "WebFetch(domain:cv.ryoppippi.com)",
       "Bash(pnpm build:cv)",
       "Bash(typst fonts:*)",
-      "WebFetch(domain:ryoppippi.com)"
+      "WebFetch(domain:ryoppippi.com)",
+      "Skill(update-config)"
     ]
   }
 }
